@@ -1,0 +1,66 @@
+<!-- Grey with black text -->
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/home/index">Index</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#">Disabled</a>
+    </li>
+  </ul>
+</nav>
+
+<!-- Black with white text -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">...</nav>
+
+<!-- Blue with white text -->
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">...</nav>
+
+
+<%= form_for @list, :url => {:action => 'create'} do |f| %>
+
+カテゴリー<textarea name="category"></textarea>
+項目<textarea name="content"></textarea>
+詳細<textarea name="name"></textarea>
+<div class="submit-btn">
+  <input type=submit value="投稿">
+</div>
+<% end %>
+
+<!--  bootstrap導入してform_tag活用チャレンジ-->
+<!-- #<%form_tag("/lists/create")do%>
+<form>
+  <div class="input-group mb-3 mt-3  col-sm-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">カテゴリー</span>
+    </div>
+    <input type="text" class="form-control" name="category">
+  </div>
+</form>
+
+<form>
+  <div class="input-group mb-3 mt-3  col-sm-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">項目</span>
+    </div>
+    <input type="text" class="form-control" name="content">
+  </div>
+</form>
+
+<form>
+  <div class="input-group mb-3 mt-3  col-sm-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">詳細</span>
+    </div>
+    <input type="text" class="form-control"  name="name">
+  </div>
+</form>
+
+<input type=submit value="投稿">
+<%end%> -->

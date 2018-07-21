@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
   <title>TheBest</title>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -59,24 +60,15 @@
             <th>url</th>
           </tr>
         </thread>
+        <%@list.each do|list| %>
         <tbody>
           <tr class="active">
-            <td>ハンバーガー</td>
-            <td>３S cafe</td>
-            <td>https://bit.ly/2KPn84v</td>
-            <td>http://3s-cafe.com/</td>
+            <td><%= list.content%></td>
+            <td><%= list.name%></td>
+            <td><%= link_to("レビュー","list.review")%></td>
+            <td><%= link_to("ホームページ","list.url")%></td>
           </tr>
-    <tr class="active">
-            <td>ベーグル</td>
-            <td>トキオナ</td>
-            <td>https://bit.ly/2unhnjs</td>
-            <td>http://baton-group.com/</td>
-          </tr>
-          <tr class="active">
-            <td>カレー</td>
-            <td>ジョグスタ</td>
-            <td>https://bit.ly/2m9PlEg</td>
-            <td>http://ast-osaka.sub.jp/jogsta/</td>
-          </tr>
+          <%end%>
       </table>
-    </div>
+
+    
